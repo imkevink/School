@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body > header {
+    background: #444444;
+    color: white;
+    padding: 10px;
+    min-height: 80px;
+}
+
+header h2 {
+    float: left;
+    margin-right: 2em;
+    width: 20%;
+}
+
+header nav {
+    float: left;
+    width: 60%;
+}
+
+header nav ul {
+    margin-top: 5px;
+    list-style: none;
+}
+
+header nav ul li {
+    float: left;
+    margin-right: 1em;
+}
+
+header input {
+    margin: 10px 0;
+    margin-left: 2em;
+    width: 10%;
+}
+
+#one {
+    padding: 50px;
+    text-align: center;
+}
+
+#two main {
+    width: 80%;
+    float: left;
+}
+
+#two main img {
+    margin-right: 10%;
+    float: right;
+    width: 80%;
+    padding-bottom: 5em;
+}
+
+#two aside {
+    width: 20%;
+    float: left;
+}
+
+#two aside img {
+    float: left;
+    clear: both;
+    width: 50%;
+    margin-bottom: 1em;
+}
+
+#three article {
+    float: left;
+    width: 50%;
+    margin-bottom: 3em;
+}
+
+#three article img {
+    width: 50%;
+    margin-left: 10%;
+    float: left;
+}
+
+#three article header,
+#three article p {
+    float: right;
+    width: 30%;
+    margin-right: 8%;
+}
+
+#three article header {
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+footer {
+    padding: 20px 5%;
+    clear: both;
+}
+
+footer aside {
+    float: left;
+    width: 20%;
+    margin-bottom: 50px;
+}
+
+footer main {
+    float: left;
+    width: 70%;
+    margin-left: 10%;   
+}
+
+@media screen and (max-width: 375px) {
+    header h2 {
+        width: 100%;
+    }
+    
+    header nav {
+        width:100%;
+    }
+    
+    header input {
+        display: none;
+    }
+    
+    #one {
+        display: none;  
+    }
+    
+    #two main {
+        width: 100%;
+    }
+    
+    #two aside {
+        display: none;  
+    }
+    
+    #three article {
+        width: 100%;
+    }
+    
+    footer aside {
+        display: none;
+    }
+}
