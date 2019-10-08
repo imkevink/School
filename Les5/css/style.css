@@ -1,0 +1,9 @@
+body {
+    background-image: linear-gradient(30deg, purple, yellow, purple);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 600px;
+    min-height: calc(100vh - 100px);
+    margin: 50px auto;
+    color: white;
+}
