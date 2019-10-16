@@ -123,16 +123,25 @@ footer main {
         display: none;  
     }
     
-    #two main {
-        width: 100%;
+    #two {
+        grid-template-columns: 100%;
     }
     
     #two aside {
         display: none;  
     }
     
+    #three {
+        grid-template-columns: 100%;
+    }
+    
     #three article {
         width: 100%;
+    }
+    
+    
+    footer {
+        grid-template-columns: 100%;
     }
     
     footer aside {
