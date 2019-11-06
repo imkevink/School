@@ -39,7 +39,8 @@ body > nav {
     left: 0;
     right: 0;
     height: 4em;
-    background: rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     
     display: grid;
@@ -66,4 +67,23 @@ body > header {
     height: 10em;
     padding: 3em;
     box-sizing: border-box;
+}
+
+body > section {
+    box-sizing: border-box;
+    width: calc(200vw / 3);
+    margin: 20px auto;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body > footer {
+    box-sizing: border-box;
+    width: calc(200vw / 3);
+    margin: 20px auto;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: right;
 }
