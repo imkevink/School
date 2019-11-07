@@ -2,11 +2,7 @@
     padding: 0;
     margin: 0;
     border: 0;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    padding-top: 4em;
+    font-family: Arial, "Berlin Sans FB", sans-serif;
 }
 
 video {
@@ -19,25 +15,9 @@ video {
     min-height: 100vh;
     transform: translate(-50%, -50%);
     z-index: -100;
-    filter: contrast(50%) brightness(150%);
-}
-
-#video-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -99;
-    background-color: #2699FB;
-    mix-blend-mode: multiply;
 }
 
 body > nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     height: 4em;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.7);
@@ -61,7 +41,7 @@ body > nav ul li {
 }
 
 body > header {
-    color: white;
+    color: #FFFFFF;
     text-align: center;
     font-size: 2rem;
     height: 10em;
@@ -69,30 +49,46 @@ body > header {
     box-sizing: border-box;
 }
 
-body > section {
-    box-sizing: border-box;
+#content {
     width: calc(200vw / 3);
-    margin: 20px auto;
-    padding: 50px;
+    margin: auto;
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-body > footer {
-    box-sizing: border-box;
-    width: calc(200vw / 3);
-    margin: 20px auto;
+#content > section {
+    padding: 50px;
+    padding-bottom: 0;
+}
+
+#content > footer {
     padding: 20px 50px;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding-top: 100px;
     text-align: right;
 }
 
-#contactcontent legend {
+#content > section h2 {
+    margin-bottom: 0.8em;
+}
+
+#sportcontent ul {
+    list-style: none;
+}
+
+#sportcontent li {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: auto 6em;
+}
+
+#sportcontent img {
+    float: right;
     width: 100%;
+}
+
+#contactcontent legend {
     font-size: 1.5em;
     font-weight: bold;
-    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -123,13 +119,13 @@ body > footer {
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #2699FB;
-    color: white;
+    color: #FFFFFF;
     border: 2px solid #2699FB;
     transition: color 0.3s, background-color 0.3s;
 }
 
 #contactcontent button:hover {
     cursor: pointer;
-    background-color: white;
+    background-color: #FFFFFF;
     color: #2699FB;
 }
