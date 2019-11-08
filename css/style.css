@@ -29,6 +29,14 @@ body > nav {
     grid-template-columns: 1fr 4fr 1fr;
 }
 
+body > nav #hamburger {
+    margin-left: 1em;
+    margin-top: 1em;
+    height: 2em;
+    width: 2em;
+    display: none;
+}
+
 body > nav ul {
     grid-column: 2/3;
     list-style: none;
@@ -47,7 +55,7 @@ body > nav ul li {
     text-align: center;
     font-size: 2rem;
     height: 11em;
-    padding: 3em;
+    padding: 3em 0;
     box-sizing: border-box;
 }
 
@@ -73,7 +81,7 @@ body > nav ul li {
 
 #content > footer {
     padding: 2em 3em;
-    padding-top: 6em;
+    padding-top: 4em;
     text-align: right;
 }
 
@@ -83,10 +91,12 @@ body > nav ul li {
 
 #sportcontent ul {
     list-style: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1em;
 }
 
 #sportcontent li {
-    margin: 1em 0;
     display: grid;
     grid-template-columns: auto 6em;
 }
@@ -170,10 +180,38 @@ body > nav ul li {
 
 /* tablet styles */
 @media only screen and (min-width: 481px) and (max-width: 1179px) {
+    body > nav {
+        grid-template-columns: 0px auto 0px;
+    }
     
+    .heading {
+        font-size: 1.6em;
+    }
+    
+    #sportcontent ul {
+        grid-template-columns: 100%;
+    }
 }
 
 /* mobile styles */
 @media only screen and (max-width: 480px) {
+    body > nav ul {
+        display: none;
+    }
     
+    body > nav #hamburger {
+        display: block;
+    }
+    
+    .heading {
+        font-size: 1.2em;
+    }
+    
+    #sportcontent ul {
+        grid-template-columns: 100%;
+    }
+    
+    #sportcontent li {
+        grid-template-columns: auto 3em;
+    }
 }
