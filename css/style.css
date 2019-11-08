@@ -96,14 +96,14 @@ body > nav ul li {
     grid-gap: 1em;
 }
 
-#sportcontent li {
-    display: grid;
-    grid-template-columns: auto 6em;
+#sportcontent p {
+    float: left;
+    width: calc(100% - 6em);
 }
 
 #sportcontent img {
     float: right;
-    width: 100%;
+    width: 6em;
 }
 
 #contactcontent legend {
@@ -211,7 +211,13 @@ body > nav ul li {
         grid-template-columns: 100%;
     }
     
-    #sportcontent li {
-        grid-template-columns: auto 3em;
+    #sportcontent p {
+        float: left;
+        width: calc(100% - 3em);
+    }
+
+    #sportcontent img {
+        float: right;
+        width: 3em;
     }
 }
