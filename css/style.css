@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     border: 0;
-    font-family: Arial, "Berlin Sans FB", sans-serif;
+    font-family: Arial, Roboto, "Sergeo UI", sans-serif;
 }
 
 video {
@@ -35,18 +37,26 @@ body > nav ul {
 }
 
 body > nav ul li {
-    margin: 0 5px;
+    margin: 0 0.3em;
     align-self: center;
     font-size: 1.5em;
 }
 
-body > header {
+.heading {
     color: #FFFFFF;
     text-align: center;
     font-size: 2rem;
-    height: 10em;
+    height: 11em;
     padding: 3em;
     box-sizing: border-box;
+}
+
+.heading h1, .heading h2 {
+    font-family: Roboto, sans-serif;
+}
+
+.heading h1 {
+    margin-bottom: 1rem;
 }
 
 #content {
@@ -57,13 +67,13 @@ body > header {
 }
 
 #content > section {
-    padding: 50px;
+    padding: 3em;
     padding-bottom: 0;
 }
 
 #content > footer {
-    padding: 20px 50px;
-    padding-top: 100px;
+    padding: 2em 3em;
+    padding-top: 6em;
     text-align: right;
 }
 
@@ -76,7 +86,7 @@ body > header {
 }
 
 #sportcontent li {
-    margin: 10px 0;
+    margin: 1em 0;
     display: grid;
     grid-template-columns: auto 6em;
 }
@@ -89,35 +99,42 @@ body > header {
 #contactcontent legend {
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 
 #contactcontent label {
     display: block;
     width: 100%;
-    margin: 10px 0;
+    margin: 0.8em 0;
 }
 
 #contactcontent input {
     font-size: 1.2em;
     width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 0.3em;
+    margin-bottom: 0.8em;
+    color: #000000;
+    background: #eeeeee;
 }
 
 #contactcontent textarea {
     font-size: 1.2em;
     width: 100%;
     min-height: calc(3.6em + 10px);
-    padding: 5px;
+    padding: 0.3em;
     margin-bottom: 10px;
     resize: vertical;
+    background: #eeeeee;
+}
+
+#contactcontent input:focus, #contactcontent textarea:focus {
+    outline: 1px solid #aaaaaa;
 }
 
 #contactcontent button {
     font-size: 1.2em;
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: 0.8em;
+    padding: 0.6em 1em;
     background-color: #2699FB;
     color: #FFFFFF;
     border: 2px solid #2699FB;
@@ -128,4 +145,35 @@ body > header {
     cursor: pointer;
     background-color: #FFFFFF;
     color: #2699FB;
+}
+
+#cookie {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    width: 10em;
+    height: 6em;
+    background: #707070;
+}
+
+#cookie p {
+    padding: 0.5em;
+}
+
+#cookie button {
+    margin: 0 0.5em;
+    width: 9rem;
+    text-align: center;
+    font-size: 0.7em;
+    color: #444444;
+}
+
+/* tablet styles */
+@media only screen and (min-width: 481px) and (max-width: 1179px) {
+    
+}
+
+/* mobile styles */
+@media only screen and (max-width: 480px) {
+    
 }
