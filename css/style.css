@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Regular.ttf");
+}
 
 * {
     padding: 0;
@@ -89,6 +92,14 @@ body > nav ul li {
     margin-bottom: 0.8em;
 }
 
+#content > section p {
+    margin: 0.5em 0;
+}
+
+#content > section footer {
+    opacity: 0.5;
+}
+
 #sportcontent ul {
     list-style: none;
     display: grid;
@@ -96,7 +107,7 @@ body > nav ul li {
     grid-gap: 1em;
 }
 
-#sportcontent p {
+#sportcontent li article {
     float: left;
     width: calc(100% - 6em);
 }
@@ -157,6 +168,10 @@ body > nav ul li {
     color: #2699FB;
 }
 
+#referralcontent aside {
+    margin-bottom: 0.5em;
+}
+
 #cookie {
     position: fixed;
     bottom: 2em;
@@ -188,8 +203,8 @@ body > nav ul li {
         font-size: 1.6em;
     }
     
-    #sportcontent ul {
-        grid-template-columns: 100%;
+    #content {
+        width: 100%;
     }
 }
 
@@ -207,17 +222,11 @@ body > nav ul li {
         font-size: 1.2em;
     }
     
-    #sportcontent ul {
-        grid-template-columns: 100%;
+    #content {
+        width: 100%;
     }
     
-    #sportcontent p {
-        float: left;
-        width: calc(100% - 3em);
-    }
-
-    #sportcontent img {
-        float: right;
-        width: 3em;
+    #sportcontent ul {
+        grid-template-columns: 100%;
     }
 }
