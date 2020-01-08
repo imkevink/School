@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Opdracht_2
 {
@@ -14,7 +15,18 @@ namespace Opdracht_2
         void Start()
         {
             GalgjeSpel galgje = new GalgjeSpel();
-            List<string> woorden = WoordenLijst();
+            List<string> woorden;
+
+            try
+            {
+                woorden = WoordenLijst();
+            }
+            catch
+            {
+                Console.WriteLine("Kon woorden.txt niet lezen");
+
+                return;
+            }
 
             galgje.Init(SelecteerWoord(woorden));
 
@@ -31,14 +43,29 @@ namespace Opdracht_2
 
         List<string> WoordenLijst()
         {
-            List<string> woorden = new List<string>
-            {
-                "vitamines",
-                "woord",
-                "programmeren",
-            };
+            List<string> woorden = new List<string>();
+            StreamReader reader = null;
 
-            return woorden;
+            try
+            {
+                reader = new StreamReader("woorde.txt");
+
+                while (!reader.EndOfStream)
+                {
+                    string woord = reader.ReadLine();
+
+                    if (woord.Length >= 3)
+                    {
+                        woorden.Add(woord);
+                    }
+                }
+
+                return woorden;
+            }
+            finally
+            {
+                reader.Close();
+            }
         }
 
         string SelecteerWoord(List<string> woorden)
@@ -56,6 +83,8 @@ namespace Opdracht_2
 
             while (aantal_pogingen > 0 && !galgje.IsGeraden())
             {
+                ToonWoord(galgje.geraden_woord);
+
                 char letter = LeesLetter(ingevoerde_letters);
 
                 ingevoerde_letters.Add(letter);
@@ -69,7 +98,6 @@ namespace Opdracht_2
                 Console.Write("Ingevoerde letters: ");
 
                 ToonLetters(ingevoerde_letters);
-                ToonWoord(galgje.geraden_woord);
             }
 
             return aantal_pogingen != 0;
