@@ -2,12 +2,12 @@
 
 namespace Opdracht_1
 {
-    public class Tijdschrift : Boek
+    public class Tijdschrift : BoekItem
     {
         public string uitgifte;
 
         public Tijdschrift(string titel, string uitgifte, double prijs)
-            : base(titel, "", prijs)
+            : base(titel, prijs)
         {
             this.uitgifte = uitgifte;
         }

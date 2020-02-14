@@ -5,26 +5,21 @@ namespace Opdracht_1
 {
     class BoekHandel
     {
-        private List<Boek> voorraad = new List<Boek>();
+        private List<BoekItem> voorraad = new List<BoekItem>();
 
-        public void VoegToe(Boek boek)
+        public void VoegToe(BoekItem boek)
         {
             voorraad.Add(boek);
-        }
-
-        public void VoegToe(Tijdschrift tijdscrift)
-        {
-            voorraad.Add(tijdscrift);
         }
 
         public void PrintVoorraad()
         {
             double totaal = 0;
 
-            foreach (Boek boek in voorraad)
+            foreach (BoekItem item in voorraad)
             {
-                boek.Print();
-                totaal += boek.prijs;
+                item.Print();
+                totaal += item.prijs;
             }
 
             Console.WriteLine("Total sales price: {0}", totaal.ToString("0.00"));
