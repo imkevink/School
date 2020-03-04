@@ -5,11 +5,11 @@ namespace Opdracht_2
 {
     public class Reservering
     {
-        const double KORTING_PER_KAARJTE = 1.0 - 0.05;
-        const double KORTING_VASTE_KLANT = 1.0 - 0.10;
+        const double KORTING_PER_KAARJTE = 0.95;
+        const double KORTING_VASTE_KLANT = 0.90;
 
         public Klant Klant { get; set; }
-        public List<Kaartje> Kaartjes { get; set; }
+        public List<Kaartje> Kaartjes { get; }
 
         public double TotaalPrijs
         {

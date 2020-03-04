@@ -14,7 +14,7 @@ namespace Opdracht_2
             get { return filmNaam; }
             set {
                 if (value.Length > 0) filmNaam = value;
-                else throw new Exception("Invalid film name");
+                else throw new ArgumentException("Invalid film name");
             }
         }
 
@@ -23,7 +23,7 @@ namespace Opdracht_2
             get { return zaal; }
             set {
                 if (value >= 1 && value <= 5) zaal = value;
-                else throw new Exception(string.Format("Invalid cinema room ({0})", value));
+                else throw new ArgumentException(string.Format("Invalid cinema room ({0})", value));
             }
         }
 
@@ -32,7 +32,7 @@ namespace Opdracht_2
             get { return aanvangstTijd; }
             set {
                 if (value.Minute == 0 || value.Minute == 30 || value.Minute == 60) aanvangstTijd = value;
-                else throw new Exception(string.Format("Invalid start time ({0})", value));
+                else throw new ArgumentException(string.Format("Invalid start time ({0})", value));
             }
         }
 
@@ -43,7 +43,7 @@ namespace Opdracht_2
             get { return minimumLeeftijd; }
             set {
                 if (value == 0 || value == 6 || value == 9 || value == 12 || value == 16) minimumLeeftijd = value;
-                else throw new Exception(string.Format("Invalid minimum age ({0})", value));
+                else throw new ArgumentException(string.Format("Invalid minimum age ({0})", value));
             }
         }
 
